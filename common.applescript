@@ -1,11 +1,11 @@
+on screencapture(window_name, path)
+    do shell script ("~/Library/Python/3.8/bin/screenshot \"" & window_name & "\" -f " & path)
+end screencapture
 
--- ??
-on screenshot(win, path)
-    do shell script ("~/Library/Python/3.8/bin/screenshot \"" & win & "\" -f " & path)
-end screenshot
+on shutdown(t_delay)
+    delay t_delay
+    tell application "Finder" to shut down
+end
 
--- set path to "~/Library/" & "Mobile " & "Documents:com~apple~CloudDocs:image:wow"
--- log path
--- screenshot("Wow",path)
-screenshot("Wow","~/Library/Mobile\\ Documents/com~apple~CloudDocs/image/wow/lastest.png")
--- tell application "System Events" to open folder "~/Library/Mobile Documents"
+-- shutdown(21600)
+-- screencapture("Wow","~/Library/Mobile\\ Documents/com~apple~CloudDocs/image/wow/lastest.png")
